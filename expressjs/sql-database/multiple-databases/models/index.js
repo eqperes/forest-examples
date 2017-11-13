@@ -21,15 +21,6 @@ dbs.forEach((info) => {
     dialectOptions: {}
   };
 
-  if (process.env.SSL_DATABASE) {
-    databaseOptions.dialectOptions.ssl = true;
-  }
-
-  if (process.env.ENCRYPT_DATABASE) {
-    databaseOptions.dialectOptions.encrypt = true;
-  }
-
-
   let connection = new Sequelize(info.connectionString, databaseOptions);
   sequelize[info.name] = connection;
 

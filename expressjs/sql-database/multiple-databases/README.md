@@ -2,6 +2,11 @@
 
 Your're in the good place if you have an application (in any language) that have multiple SQL databases and you would like to have one Forest admin interface built on top.
 
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [How it works](#how-it-works)
+- [Need help](#need-help)
+
 ![Screenshot](screenshot.png?raw=true "Screenshot")
 
 ## Requirements
@@ -68,3 +73,19 @@ Finally, click *Next*, choose a project name and finalize your Forest account cr
 ## How it works
 
 Most of the code is simply based on the [Sequelize express-example repository](https://github.com/sequelize/express-example).
+
+#### File: `models/index.js`
+
+The variable `dbs` is an array of object that describes all your databases connections.
+
+#### File: `app.js`
+
+In the `forest-express-sequelize` middleware configuration, we pass all your database connections to the option `connections`.
+
+### Directory: `models/`
+
+Each database must have its own directory in the `models/` folder. Then all your database models have to be put in the right one.
+
+## Need help?
+
+Simply post an issue in this repository.
