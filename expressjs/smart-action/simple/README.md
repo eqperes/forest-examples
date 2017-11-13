@@ -1,6 +1,7 @@
-# Forest with Expressjs - Multiple SQL Databases Example
+# Forest with Expressjs - Simple Smart Action Example
 
-Your're in the good place if you have an application (in any language) that have multiple SQL databases and you would like to have one Forest admin interface built on top.
+This example shows you how to create a very simple Smart Action "Block account"
+on a "customers" collection.
 
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -20,7 +21,7 @@ Your're in the good place if you have an application (in any language) that have
 #### 1. Clone this repository
 ```
 $ git clone https://github.com/ForestAdmin/forest-examples.git
-$ cd forest-examples/expressjs/sql-database/multiple-databases/
+$ cd forest-examples/expressjs/smart-action/simple
 ```
 
 #### 2. Create the postgres databases
@@ -28,9 +29,8 @@ $ cd forest-examples/expressjs/sql-database/multiple-databases/
 $ docker-compose up
 ```
 
-#### 3. Restore the database dumps
+#### 3. Restore the database dump
 ```
-$ pg_restore -O -d forest_movies ../../../sample-data/dump-postgres/movies.dump -h localhost -p 5445 -U forest
 $ pg_restore -O -d forest_meals ../../../sample-data/dump-postgres/meals.dump -h localhost -p 5446 -U forest
 ```
 
@@ -44,8 +44,7 @@ $ npm install
 Open the file `.env` and set the following environment variables:
 
 ```
-DATABASE1_URL=postgres://forest:secret@localhost:5445/forest_movies
-DATABASE2_URL=postgres://forest:secret@localhost:5446/forest_meals
+DATABASE_URL=postgres://forest:secret@localhost:5446/forest_meals
 FOREST_AUTH_SECRET=
 FOREST_ENV_SECRET=
 ```
@@ -74,18 +73,15 @@ Finally, click *Next*, choose a project name and finalize your Forest account cr
 
 Most of the code is simply based on the [Sequelize express-example repository](https://github.com/sequelize/express-example).
 
-#### File: `models/index.js`
+#### File: `forest/customers.js`
 
-The variable `dbs` is an array of object that describes all your databases connections.
+This file contains the Smart Action declaration `Block account`.
 
-#### File: `app.js`
+#### File: `routes/customers.js`
 
-In the `forest-express-sequelize` middleware configuration, we pass all your database connections to the option `connections`.
-
-### Directory: `models/`
-
-Each database must have its own directory in the `models/` folder. Then all your database models have to be put in the right one.
+This file contains the implementation of the route that handled the `POST /forest/actions/block-account` API call when you click on the `Block account` Smart Action in the Forest UI.
 
 ## Need help?
 
 Simply post an issue in this repository.
+
