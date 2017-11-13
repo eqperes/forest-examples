@@ -1,6 +1,6 @@
 {
-  "name": "Oyst1",
-  "version": "0.0.1",
+  "name": "forest-examples-sql-multiple-databases",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
