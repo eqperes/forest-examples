@@ -1,0 +1,19 @@
+postgres :
+  image : postgres:9.4.5
+  container_name : movies
+  ports :
+    - "5445:5432"
+  environment:
+    - POSTGRES_DB=forest_movies
+    - POSTGRES_USER=forest
+    - POSTGRES_PASSWORD=secret
+
+postgres2:
+  image : postgres:9.4.5
+  container_name : meals
+  ports :
+    - "5446:5432"
+  environment:
+    - POSTGRES_DB=forest_meals
+    - POSTGRES_USER=forest
+    - POSTGRES_PASSWORD=secret
