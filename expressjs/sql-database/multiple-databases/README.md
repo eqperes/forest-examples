@@ -2,6 +2,8 @@
 
 Your're in the good place if you have an application (in any language) that have multiple SQL databases and you would like to have one Forest admin interface built on top.
 
+![Screenshot](screenshot.png?raw=true "Screenshot")
+
 ## Requirements
 - Git
 - Nodejs & NPM
