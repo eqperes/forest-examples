@@ -16,6 +16,7 @@ triggers a [Zapier hook](https://zapier.com/zapbook/webhook/) to interact with
 - Nodejs & NPM
 - Postgres client
 - Docker & Docker Compose
+- A Zapier account
 
 ## Installation
 
