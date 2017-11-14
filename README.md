@@ -1,5 +1,5 @@
 # Forest Admin Examples
-A list of examples of Forest Admin implementations, to show customization features and how they work together.
+A list of examples of Forest Admin implementations, to show customization features and how they work together. This list is organized with the same structure: `Language/Framework` / `Database` / `Feature` / `Variant`.
 
 - [Expressjs / Any Database / Smart Action / Simple](/examples/expressjs/smart-action/simple)
 - [Expressjs / Any Database / Smart Action / With input values](/examples/expressjs/smart-action/with-input-values)
