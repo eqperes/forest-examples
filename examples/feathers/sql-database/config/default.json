@@ -1,0 +1,14 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "postgres": "postgres://forest:secret@localhost:5446/forest_meals",
+  "forest": {
+    "envSecret": "YOUR FOREST ENV SECRET",
+    "authSecret": "CHOOSE A RANDOM SECRET AUTH KEY"
+  }
+}

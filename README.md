@@ -7,6 +7,7 @@ A list of examples of Forest Admin implementations, to show customization featur
 - [Expressjs / Any Database / Smart Action / Integration with Zapier](/examples/expressjs/smart-action/integration-with-zapier)
 - [Any Framework / MongoDB Database / Simple](/examples/mongodb-database/simple)
 - [Any Framework / SQL Database / Multiple databases support](/examples/sql-database/multiple-databases)
+- [Feathers / SQL Database / Simple](/examples/feathers/sql-database)
 
 ## Need more examples?
 
